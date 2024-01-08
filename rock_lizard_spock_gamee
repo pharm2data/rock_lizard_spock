@@ -1,0 +1,68 @@
+import random
+
+your_choice = input("Enter a choice Rock, Paper, Scissors, Lizard, or Spock: ")
+
+possible_choices = ["Rock", "Paper" , "Scissors" , "Lizard" , "Spock"]
+
+computer_choice = random.choice(possible_choices)
+
+print("Your choice was:", (your_choice), ".")
+print("The computer's choice was:",(computer_choice) , ".")
+
+if your_choice == computer_choice:
+    print("It's a tie!")
+
+elif your_choice == "Rock":
+    if computer_choice == "Scissors":
+        print("Rock crushes Scissors, You win!")
+    else:
+        if computer_choice == "Paper":
+            print("Paper covers rock, You lose!")
+        if computer_choice == "Lizard":
+            print("Rock crushes Lizard, You lose!")
+        if computer_choice == "Spock":
+            print("Spock vaporizes rock, You lose!")
+
+elif your_choice == "Paper":
+    if computer_choice == "Scissors":
+        print("Scissors cut paper, You lose!")
+    else:
+        if computer_choice == "Rock":
+            print("Paper covers rock, You win!")
+        if computer_choice == "Lizard":
+            print("Lizard eats paper, You lose!")
+        if computer_choice == "Spock":
+            print("Paper disproves Spock, You lose!")
+
+elif your_choice == "Scissors":
+    if computer_choice == "Paper":
+        print("Scissors cut paper, You win!")
+    else:
+        if computer_choice == "Rock":
+            print("Rock crushes scissors, You lose!")
+        if computer_choice == "Lizard":
+            print("Scissors decapitates lizard, You win!")
+        if computer_choice == "Spock":
+            print("Spock smashes scissors, You lose!")
+
+elif your_choice == "Lizard":
+    if computer_choice == "Paper":
+        print("Lizard easts paper, You win!")
+    else:
+        if computer_choice == "Rock":
+            print("Rock crushes lizard, You lose!")
+        if computer_choice == "Scissors":
+            print("Scissors decapitates lizard, You lose!")
+        if computer_choice == "Spock":
+            print("Lizard poisons spock, You win!")
+    
+elif your_choice == "Spock":
+    if computer_choice == "Paper":
+        print("Paper disproves spock, You lose!")
+    else:
+        if computer_choice == "Rock":
+            print("Spock vaprorizes rock, You win!")
+        if computer_choice == "Scissors":
+            print("Spock smashes scissors, You win!")
+        if computer_choice == "Lizard":
+            print("Lizard poisons spock, You lose!")
